@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estudio.css') }}?v={{ time }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="{{ url_for('static', filename='imagens/gugologo.png') }}"></a>
+        </div>
+        <ul>
+            <li><a href="/home" class="active"><strong>Home</strong></a></li>
+            <li><a href="/galeria"><strong>Galeria</strong></a></li>
+            <li><a href="/estudio"><strong>Estudio</strong></a></li>
+            <li><a href="/atendimento"><strong>Atendimento</strong></a></li>
+        </ul>
+    </nav>
+<section>
+    <div class="texto1">
+        <img src="{{ url_for('static', filename='imagens/estudio1.png') }}" alt="">
+        <div class="escritas1">
+            <h1>O Estúdio</h1>
+            <p>Mais do que um lugar para tatuar, o estúdio é um espaço criado para inspirar. <br> 
+            Aqui, cada detalhe foi pensado para que você se sinta à vontade, tranquilo e conectado com a arte.  <br>
+            Das paredes decoradas com obras autorais ao som ambiente que embala cada sessão, tudo é feito para transformar a tatuagem em uma experiência completa, do primeiro traço ao último retoque.
+            </p>
+        </div>
+    </div>
+    <hr class="linha-fina">
+    <div class="texto2">
+        <img src="{{ url_for('static', filename='imagens/estudio2.png') }}" alt="">
+        <div class="escritas2">
+            <h1>Um espaço que respira arte</h1>
+            <p>Nosso estúdio foi desenhado para unir conforto, estética e criatividade. <br>
+            A iluminação suave destaca cada traço, enquanto o ambiente acolhedor ajuda a transformar o momento da tatuagem em algo leve e prazeroso. <br>
+            Queremos que cada pessoa que entra aqui sinta a energia do lugar, a calma do espaço e a liberdade de se expressar. <br>
+            É um refúgio para quem carrega arte na pele e na alma.
+            </p>
+        </div>
+    </div>
+    <hr class="linha-fina">
+    <div class="texto3">
+        <img src="{{ url_for('static', filename='imagens/estudio3.png') }}" alt="">
+        <div class="escritas3">
+            <h1>Segurança em primeiro lugar</h1>
+            <p>Levamos a higiene e a segurança tão a sério quanto a arte. <br>
+            Todos os materiais utilizados são esterilizados e descartáveis, garantindo um ambiente totalmente seguro. <br>
+            Seguimos rigorosamente as normas da Anvisa e mantemos um espaço sempre limpo, organizado e preparado para cada novo cliente. <br>
+            Tatuar é uma experiência pessoal e única, e aqui ela acontece com o máximo de cuidado e responsabilidade.
+            </p>
+        </div>
+    </div>
+    <hr class="linha-fina">
+    <div class="texto4">
+        <img src="{{ url_for('static', filename='imagens/estudio4.jpg') }}" alt="">
+        <div class="escritas4">
+            <h1>Um estúdio com alma</h1>
+            <p>O estúdio tem uma energia única, uma mistura de arte, música e boas conversas. <br>
+            Entre um traço e outro, rolam risadas, histórias e aquela conexão que só um verdadeiro espaço de criação consegue oferecer. <br>
+            Cada artista traz sua própria personalidade, e isso se reflete nas paredes, nas tatuagens e até no clima do lugar. <br>
+            Aqui, você não é só mais um cliente: você faz parte da nossa história.
+            </p>
+        </div>
+    </div>
+    <hr class="linha-fina">
+    <div class="container5">
+        <div class="texto5">
+            <h1><strong>Descubra o espaço</strong></h1>
+            <p><strong>Dê uma olhada em cada canto do estúdio, o local onde a arte ganha vida. 
+            Das salas de tatuagem equipadas aos detalhes de decoração que contam nossa trajetória, tudo foi pensado pra inspirar quem entra. 
+            Sinta o clima, veja onde a mágica acontece e venha conhecer pessoalmente esse lugar feito por e para artistas.</strong></p>
+        </div>
+        <div class="div-video">
+            <video autoplay muted loop playsinline id="bg-video" class="video">
+                <source src="{{ url_for('static', filename='videos/videoestudio.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</section>
+<footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <img src="{{ url_for('static', filename='imagens/gugologo.png') }}" alt="Gugo tattoo" class="footer-logo">
+      <p>Cada traço, uma história. <br> A sua pode começar agora.</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>LINKS RÁPIDOS</h3>
+      <ul>
+        <li><a href="#">O Estúdio</a></li>
+        <li><a href="#">Artistas</a></li>
+        <li><a href="#">Galeria</a></li>
+        <li><a href="#">Orçamento</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>CONTATO</h3>
+      <p>Horário de Funcionamento:</p>
+      <p>Terça a Sexta: 10h às 20h</p>
+      <p>Sábado: 10h às 18h</p>
+      <div class="footer-bt-div">
+        <button class="footer-bt">
+          <img src="{{ url_for('static', filename='imagens/instagram.svg') }}" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Gugo Tattoo. Todos os direitos reservados</p>
+    <p>Rua João Bueno, 155, Guarulhos, SP</p>
+  </div>
+</footer>
+</body>
+</html>

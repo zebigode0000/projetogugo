@@ -1,0 +1,363 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+ nav {
+  text-transform: uppercase;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5%;
+  position: fixed;
+  width: 90vw;
+  top: 0;
+  z-index: 1000;
+  background-color: #000;
+}
+
+
+.logo img {
+  height: 60px;          
+  width: auto;           
+  max-width: 100%;       
+  transition: 0.3s ease; 
+}
+
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+ul li a {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: larger;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+}
+ul li ::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #b4977b;
+  transition: width 0.3s ease;
+}
+
+ul li :hover::after {
+  width: 100%;
+}
+ul li :hover{
+  color: #b4977b;
+}
+
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 45px; 
+    margin-bottom: 10px;
+  }
+
+  ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  ul li a {
+    padding: 8px 12px;
+    font-size: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: medium;
+  }
+}
+
+section{
+    color: white;
+}
+.titulo{
+    margin-top: 100px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+}
+.titulo h1{
+    text-transform: uppercase;
+    margin: 0%;
+}
+.titulo p{
+    color: #949494;
+    margin: 0%;
+    margin-top: 5px;
+}
+@media (max-width: 768px) {
+    .titulo{
+        margin-top: 150px;
+        font-size: 20px;
+    }
+    
+}
+.containers{
+    font-family: "Montserrat", sans-serif;
+    margin-left: 0px;
+    border-color: #b4977b;
+    max-width: 700px;
+    margin-top: 50px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.bloco{
+    background-color: #0f0f0f;
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid #494949;
+    transition: 0.3s ease;
+}
+.bloco:hover{
+    border-color: #b4977b;
+    transform: scale(1.01);
+}
+.icon-endereço{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.icon-endereço h1{
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-bottom: 0%;
+}
+.bloco h1{
+    text-transform: uppercase;
+}
+.bloco p{
+    margin: 5px 0 10px 45px;
+    margin-left: 73px;
+    font-size: 16px;
+}
+.icon-whatsapp{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.icon-whatsapp h1{
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-bottom: 0%;
+    
+}
+.icon-email{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.icon-email h1{
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-bottom: 0%;
+    
+}
+.icon-horario{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.icon-horario h1{
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-bottom: 0%;
+    
+}
+i{
+    color: #b4977b;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.button-whats{
+    width: 200px;
+    overflow: hidden;
+    height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: 73px;
+    background-color: transparent;
+    color: #b4977b;
+    border-color: #b4977b;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+    font-weight: 600;
+}
+.button-whats:hover{
+    background-color: #5f5041;
+    color: #000;
+    transform: scale(1.05);
+}
+.conteudo-atendimento{
+    display: flex;
+    justify-content: center;
+}
+hr{
+    border: none; 
+    border-top: 1px solid #ccc; 
+    margin-left: 74px;
+    margin-right: 100px;
+    margin-top: 0px;
+}
+footer {
+  background-color: #0d0d0d;
+  color: #d1d1d1;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 10%;
+  border-top: 1px solid #222;
+  margin-top: 280px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-column {
+  min-width: 220px;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 180px;
+  margin-bottom: 10px;
+}
+
+.footer-column h3 {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: start;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-column ul {
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* força o empilhamento vertical */
+  gap: 8px; /* espaçamento entre os itens */
+}
+
+.footer-column ul li {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-column ul li a {
+  display: block;
+  text-decoration: none;
+  color: #bfbfbf;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+.instagram-icon{
+  width: 10%;
+
+}
+.footer-bt-div {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-bt {
+  border-radius: 15px;
+  width: 60px;
+  height: 60px;
+  background-color: #0d0d0d;
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+  font-weight: 550;
+  border: 2px solid #b4977b;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-bt img {
+  width: 24px;
+  height: 24px;
+  pointer-events: none; /* garante que o hover funcione no botão, não na imagem */
+}
+
+.footer-bt:hover {
+  background-color: #b4977b;
+}
+
+.footer-bottom {
+  border-top: 1px solid #222;
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 30px;
+  }
+}
+footer {
+  background-color: #000;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='galeria.css') }}?v={{ time }}">
+    <script>
+function showGallery(id) {
+  // esconde todas as galerias
+  document.querySelectorAll('.gallery').forEach(g => g.style.display = 'none');
+
+  // mostra apenas a escolhida
+  const selected = document.getElementById(id);
+  if (selected) {
+    selected.style.display = 'block';
+  }
+}
+</script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="{{ url_for('static', filename='imagens/gugologo.png') }}"></a>
+        </div>
+        <ul>
+            <li><a href="/home" class="active"><strong>Home</strong></a></li>
+            <li><a href="/galeria"><strong>Galeria</strong></a></li>
+            <li><a href="/estudio"><strong>Estudio</strong></a></li>
+            <li><a href="/atendimento"><strong>Atendimento</strong></a></li>
+        </ul>
+    </nav>
+<section class="banner-galeria">
+    <div class="escritas-banner">
+        <h1>Galeria de inspirações</h1>
+        <p>Explore nossa coleção de trabalhos únicos e inspire-se para sua próxima tatuagem</p>
+    </div>
+</section>
+<section>
+    <div class="buttons">
+            <button class="button-css" onclick="showGallery('gugo')">Gugo Tattoo</button>
+            <button class="button-css" onclick="showGallery('edgar')">Edgar</button>
+            <button class="button-css" onclick="showGallery('gislaine')">Gislaine</button>
+            <button class="button-css" onclick="showGallery('shira')">Shira</button>
+            <button class="button-css" onclick="showGallery('luana')">Luana</button>  
+    </div>
+
+    <div class="gallery" id="gugo">
+        <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Gugo Tattoo 1">
+        <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Gugo Tattoo 2">
+        <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Gugo Tattoo 3">
+        <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Gugo Tattoo 3">
+        <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Gugo Tattoo 3">
+    </div>
+    <div class="gallery" id="edgar">
+        <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Edgar 1">
+        <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Edgar 2">
+    </div>
+    <div class="gallery" id="gislaine">
+        <img src="gis1.jpg" alt="Gislaine 1">
+    </div>
+
+    <div class="gallery" id="shira">
+        <img src="shira1.jpg" alt="Shira 1">
+    </div>
+
+    <div class="gallery" id="luana">
+        <img src="luana1.jpg" alt="Luana 1">
+    </div>
+</section>
+</body>
+</html>

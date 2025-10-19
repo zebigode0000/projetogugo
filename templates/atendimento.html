@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='atendimento.css') }}?v={{ time }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="{{ url_for('static', filename='imagens/gugologo.png') }}"></a>
+        </div>
+        <ul>
+            <li><a href="/home" class="active"><strong>home</strong></a></li>
+            <li><a href="/galeria"><strong>Galeria</strong></a></li>
+            <li><a href="/estudio"><strong>Estudio</strong></a></li>
+            <li><a href="/atendimento"><strong>Atendimento</strong></a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="titulo">
+            <h1> entre em contato</h1>
+            <p>Estamos aqui para tirar qualquer dúvida e agendar sua proxima tatuagem.</p>
+        </div>
+    <div class="conteudo-atendimento">
+        <div class="containers">
+            <div class="bloco">
+                <div class="icon-endereço"> 
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h1><strong>endereço</strong></h1>
+                </div>
+                <p>R. João Bueno, 155 - Jardim Barbosa, Guarulhos - SP, 07114-420
+</p>
+            </div>
+            <div class="bloco">
+                <div class="icon-whatsapp"> 
+                    <i class="fab fa-whatsapp"></i>
+                    <h1><strong>whatsapp</strong></h1>
+                </div>
+                <p>(11) 99210-5793</p>
+                <button class="button-whats">Chamar no whatsapp</button>
+            </div>
+            <div class="bloco">
+                <div class="icon-email"> 
+                    <i class="fas fa-envelope"></i>
+                    <h1><strong>email</strong></h1>
+                </div>
+                <p>Gugotattoo@gmail.com.br</p>
+            </div>
+            <div class="bloco">
+                <div class="icon-horario"> 
+                    <i class="fas fa-clock"></i>
+                    <h1><strong>horario atendimento</strong></h1>
+                </div>
+                <p class="p-horario">domingo	Fechado <br>
+                    segunda-feira	Fechado <br>
+                    <hr></p>
+                <p>
+                    terça-feira	10:00–20:00 <br>
+                    quarta-feira	10:00–20:00 <br>
+                    quinta-feira	10:00–20:00 <br>
+                    sexta-feira	10:00–20:00 <br>
+                    sábado	10:00–20:00</p>
+            </div>
+            <div class="mapa-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.2057038148817!2d-46.53673552467145!3d-23.49079097893116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce518712399233%3A0xf626b1c0b396263!2sR.%20Jo%C3%A3o%20Bueno%2C%20155%20-%20Jardim%20Barbosa%2C%20Guarulhos%20-%20SP%2C%2007114-420!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="200%"
+                style="border:0; border-radius: 15px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localização na R. João Bueno, Guarulhos"
+                
+            ></iframe>
+        </div>
+
+        </div>
+    </div>
+    </section>
+    <footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <img src="{{ url_for('static', filename='imagens/gugologo.png') }}" alt="Gugo tattoo" class="footer-logo">
+      <p><strong>Cada traço, uma história. <br> A sua pode começar agora.
+      </strong></p>
+    </div>
+
+    <div class="footer-column">
+      <h3>LINKS RÁPIDOS</h3>
+      <ul>
+        <li><a href="#">O Estúdio</a></li>
+        <li><a href="#">Artistas</a></li>
+        <li><a href="#">Galeria</a></li>
+        <li><a href="#">Orçamento</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>CONTATO</h3>
+      <p>Horário de Funcionamento:</p>
+      <p>Terça a Sexta: 10h às 20h</p>
+      <p>Sábado: 10h às 18h</p>
+      <div class="footer-bt-div">
+        <button class="footer-bt">
+          <img src="{{ url_for('static', filename='imagens/instagram.svg') }}" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Gugo Tattoo. Todos os direitos reservados</p>
+    <p>Rua João Bueno, 155, Guarulhos, SP</p>
+  </div>
+</footer>
+</body>
+</html>

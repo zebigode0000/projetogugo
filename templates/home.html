@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}?v={{ time }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">
+            <a href="#"><img src="{{ url_for('static', filename='imagens/gugologo.png') }}"></a>
+        </div>
+        <ul>
+            <li><a href="/home" class="active"><strong>home</strong></a></li>
+            <li><a href="/galeria"><strong>Galeria</strong></a></li>
+            <li><a href="/estudio"><strong>Estudio</strong></a></li>
+            <li><a href="/atendimento"><strong>Atendimento</strong></a></li>
+        </ul>
+    </nav>
+    <section class="banner"> 
+    <div class="conteudo">
+    <h1>MARQUE <br><span>HISTÓRIA</span></h1>
+    <p>
+      Cada detalhe é planejado com cuidado, <br>
+      garantindo qualidade e conforto em todo o processo. <br>
+    </p>
+    <a href="#" class="botao">AGENDE SEU HORÁRIO</a>
+  </div>
+</section>
+<section class="sobre">
+    <picture>
+        <source media="(max-width: 900px )" srcset="{{ url_for('static', filename='imagens/tatoo.png') }}">
+        <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="">
+    </picture>
+    <div class="conteudo2">
+    <h1><strong>SOBRE NÓS</strong></h1>
+    <p>No Gugo Tattoo, a arte é levada a sério, e cada traço conta uma história.
+      Localizado no coração de Guarulhos (SP), o estúdio se tornou referência em tatuagens e piercings pela combinação perfeita entre técnica, criatividade e segurança. <br>Aqui, cada cliente é único. O processo começa com uma conversa, uma ideia, um sentimento. A partir disso, transformamos o que está na mente em arte permanente, feita com dedicação, precisão e respeito pela pele. <br>Nosso compromisso vai além da estética. Trabalhamos com materiais esterilizados, ambiente higienizado e profissionais experientes, garantindo não só resultados incríveis, mas também uma experiência segura e tranquila do início ao fim. <br> Mais do que um estúdio, o Gugo Tattoo é um espaço onde a arte respira, onde cada agulha traduz emoção, e cada desenho carrega um pedaço de quem você é.
+      Dor, tinta e alma se encontram aqui para criar algo eterno. </p>
+    <br><br>
+    <ul>
+        <li><i class="fa-solid fa-check"></i> 10 anos de Profissão</li>
+        <li><i class="fa-solid fa-check"></i> Criações exclusivas</li>
+        <li><i class="fa-solid fa-check"></i> confortavel e amigavel</li>
+        <li><i class="fa-solid fa-check"></i> pela ANVISA</li>
+    </ul>
+</div>
+</section>
+<section class="profissionais">
+
+    <h1><strong>Nosso time</strong></h1>
+
+<div class="carousel">
+    <div class="card">
+      <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Pessoa 1">
+      <h3>Gugo Tattoo</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi cum eum alias enim, explicabo temporibus iure voluptate consequuntur quisquam totam, eius odit dicta earum nostrum quis laboriosam voluptates similique nobis.</p>
+    <div class="botoes">
+      <button class="button">Instagram</button>
+      <button class="button">Portfolio</button>
+    </div>
+    </div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Pessoa 2">
+      <h3>Edgar</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum repellat animi necessitatibus debitis vero in incidunt nesciunt omnis eum! Tempore perferendis facere asperiores cum dolorum tenetur rerum iusto odio!</p>
+      <div class="botoes">
+      <button class="button">Instagram</button>
+      <button class="button">Portfolio</button>
+    </div>
+    </div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Pessoa 3">
+      <h3>Gislaine</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dolore ad delectus, libero omnis deleniti voluptatum impedit dolorem nulla nesciunt tempore eum voluptate totam, quam, deserunt praesentium ipsa? Vel, unde?</p>
+      <div class="botoes">
+      <button class="button">Instagram</button>
+      <button class="button">Portfolio</button>
+    </div>
+    </div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Pessoa 4">
+      <h3>Shira</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, tenetur cupiditate corporis molestiae odio ducimus, inventore aperiam quas temporibus neque repudiandae necessitatibus magnam, cumque ut praesentium porro perspiciatis unde est?</p>
+      <div class="botoes">
+      <button class="button">Instagram</button>
+      <button class="button">Portfolio</button>
+    </div>
+    </div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Pessoa 5">
+      <h3>Luana</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium fuga cum facere iure, voluptates rerum rem officia fugit molestiae incidunt aliquam iusto accusamus blanditiis provident ipsam! Voluptatibus vitae dolor nesciunt?</p>
+      <div class="botoes">
+      <button class="button">Instagram</button>
+      <button class="button">Portfolio</button>
+      </div>
+    </div>
+</div>
+</section>
+<section class="avaliamento">
+
+  <h1 class="clienteh1"><strong>oque nossos clientes dizem</strong></h1>
+  <p class="clientep">Confiança e Satisfações comprovadas</p>
+  <div class="avaliacoes">
+    <div class="individual">
+      <p>"Pessoal tudo bem, quero agradecer ao pessoal do Gugo Tatoo, por todo processo, me deixarão bem tranquilo, pois foi a minha primeira, e o resultado melhor do que eu esperava, estou curtindo muito, um abraço espacial para o Edy que fez a minha, recomendo, valeu"</p>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <hr>
+      <h3 class="avaliah3">Marcos M2X</h3>
+        <p class="avaliap">Avaliação Google</p>
+    </div>
+    <div class="individual">
+      <p>"Desde o atendimento da Herica, que é super solicita e simpática, oferecendo detalhes sobre o procedimento, o ambiente agradável e cheio de boas energias somados a tranquilidade, gentileza e técnica impecável do Gugo!"</p>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <hr>
+        <h3 class="avaliah3">Erika Farias</h3>
+          <p class="avaliap">Avaliação Google</p>
+    </div>
+    <div class="individual">
+      <p>"O ambiente é muito bacana, os profissionais são muito bons, tudo é bem limpo e organizado, a minha tatoo ficou muito top, acima das expectativas."</p>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <hr>
+        <h3 class="avaliah3">Elton Ferreira</h3>
+          <p class="avaliap">Avaliação Google</p>
+    </div>
+    <div class="individual">
+      <p>"Melhor studio de tatuagem de Guarulhos e região, sou cliente há 10 anos e minha primeira tattoo é tão viva q parece que foi feita ontem"</p>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <hr>
+        <h3 class="avaliah3">Debora Elyodora</h3>
+          <p class="avaliap">Avaliação Google</p>
+    </div>
+    <div class="individual">
+      <p>"Fiz minha 4ª tatuagem com eles, recomendo sempre, muito bem atendido, todos são verdadeiros artistas, vou fazer mais algumas com certeza."</p>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <hr>
+        <h3 class="avaliah3">felipe mattos calchi</h3>
+          <p class="avaliap">Avaliação Google</p>
+    </div>
+    <div class="individual">
+      <p>"Sem palavras um lugar maravilhoso
+          Sem duvidas é um estúdio de primeiro mundo
+          Show, atendimento impecável recepção impecável
+         certeza já sou cliente dele e super indico."</p>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <div class="estrelas">
+          <span class="star">&#9733;</span> <!-- 5 vezes -->
+        </div>
+        <hr>
+        <h3 class="avaliah3">China Viana</h3>
+          <p class="avaliap">Avaliação Google</p>
+    </div>
+</div>
+<div class="avaliabt">
+      <button class="bt">ver mais avaliações</button>
+    </div>
+</section>
+<section class="bannerorç">
+  
+  <div class="orçconteudo">
+    <h1 class="h1orç">pronto para sua proxima <br> <span>tatuagem</span></h1>
+    <p class="porç">Com dedicação, segurança e criatividade, damos vida à sua ideia através da tatuagem <br> Nosso compromisso é entregar arte de qualidade, feita com cuidado, técnica e o respeito que sua pele merece.</p>
+    <div class="button-animate">
+      <button class="buttonorç">fazer orçamento</button>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <img src="{{ url_for('static', filename='imagens/gugologo.png') }}" alt="Gugo tattoo" class="footer-logo">
+      <p><strong>Cada traço, uma história. <br> A sua pode começar agora.
+      </strong></p>
+    </div>
+
+    <div class="footer-column">
+      <h3>LINKS RÁPIDOS</h3>
+      <ul>
+        <li><a href="#">O Estúdio</a></li>
+        <li><a href="#">Artistas</a></li>
+        <li><a href="#">Galeria</a></li>
+        <li><a href="#">Orçamento</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>CONTATO</h3>
+      <p>Horário de Funcionamento:</p>
+      <p>Terça a Sexta: 10h às 20h</p>
+      <p>Sábado: 10h às 18h</p>
+      <div class="footer-bt-div">
+        <button class="footer-bt">
+          <img src="{{ url_for('static', filename='imagens/instagram.svg') }}" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Gugo Tattoo. Todos os direitos reservados</p>
+    <p>Rua João Bueno, 155, Guarulhos, SP</p>
+  </div>
+</footer>
+
+</body>
+
+</html>
