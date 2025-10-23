@@ -26,7 +26,7 @@ body {
 }
 
 
-ul {
+.ul-nav {
   list-style: none;
   display: flex;
   gap: 20px;
@@ -34,7 +34,7 @@ ul {
   padding: 0;
 }
 
-ul li a {
+.ul-nav li a {
   cursor: pointer;
   position: relative;
   display: block;
@@ -47,7 +47,7 @@ ul li a {
   border-radius: 15px;
   transition: background-color 0.3s ease;
 }
-ul li ::after {
+.ul-nav li ::after {
   content: '';
   position: absolute;
   left: 0;
@@ -58,10 +58,10 @@ ul li ::after {
   transition: width 0.3s ease;
 }
 
-ul li :hover::after {
+.ul-nav li :hover::after {
   width: 100%;
 }
-ul li :hover{
+.ul-nav li :hover{
   color: #b4977b;
 }
 
@@ -78,17 +78,17 @@ ul li :hover{
     margin-bottom: 10px;
   }
 
-  ul {
+  .ul-nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
   }
 
-  ul li a {
+  .ul-nav li a {
     padding: 8px 12px;
-    font-size: 14px;
+    font-size: 10px;
     font-family: "Montserrat", sans-serif;
-    font-size: large;
+    font-size: medium;
   }
 }
 .banner-galeria{
@@ -186,4 +186,135 @@ ul li :hover{
 
 .gallery img:hover {
   transform: scale(1.1);
+}
+footer {
+  background-color: #0d0d0d;
+  color: #d1d1d1;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 10%;
+  border-top: 1px solid #222;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-column {
+  min-width: 220px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 180px;
+  margin-bottom: 10px;
+}
+
+.footer-column h3 {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: start;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-column ul {
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* força o empilhamento vertical */
+  gap: 8px; /* espaçamento entre os itens */
+}
+
+.footer-column ul li {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-column ul li a {
+  display: block;
+  text-decoration: none;
+  color: #bfbfbf;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-column ul li a:hover {
+  color: #b4977b;
+}
+.instagram-icon{
+  width: 10%;
+
+}
+.footer-bt-div {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-bt {
+  border-radius: 15px;
+  width: 60px;
+  height: 60px;
+  background-color: #0d0d0d;
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+  font-weight: 550;
+  border: 2px solid #b4977b;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-bt img {
+  width: 24px;
+  height: 24px;
+  pointer-events: none; /* garante que o hover funcione no botão, não na imagem */
+}
+
+.footer-bt:hover {
+  background-color: #b4977b;
+}
+
+.footer-bottom {
+  border-top: 1px solid #222;
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 30px;
+  }
+}
+footer {
+  background-color: #000;
 }

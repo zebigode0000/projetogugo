@@ -23,7 +23,7 @@ function showGallery(id) {
         <div class="logo">
             <a href="#"><img src="{{ url_for('static', filename='imagens/gugologo.png') }}"></a>
         </div>
-        <ul>
+        <ul class="ul-nav">
             <li><a href="/home" class="active"><strong>Home</strong></a></li>
             <li><a href="/galeria"><strong>Galeria</strong></a></li>
             <li><a href="/estudio"><strong>Estudio</strong></a></li>
@@ -68,5 +68,41 @@ function showGallery(id) {
         <img src="luana1.jpg" alt="Luana 1">
     </div>
 </section>
+<footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <img src="{{ url_for('static', filename='imagens/gugologo.png') }}" alt="Gugo tattoo" class="footer-logo">
+      <p><strong>Cada traço, uma história. <br> A sua pode começar agora.
+      </strong></p>
+    </div>
+
+    <div class="footer-column">
+      <h3>LINKS RÁPIDOS</h3>
+      <ul>
+        <li><a href="#">O Estúdio</a></li>
+        <li><a href="#">Artistas</a></li>
+        <li><a href="#">Galeria</a></li>
+        <li><a href="#">Orçamento</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>CONTATO</h3>
+      <p>Horário de Funcionamento:</p>
+      <p>Terça a Sexta: 10h às 20h</p>
+      <p>Sábado: 10h às 18h</p>
+      <div class="footer-bt-div">
+        <button class="footer-bt">
+          <img src="{{ url_for('static', filename='imagens/instagram.svg') }}" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Gugo Tattoo. Todos os direitos reservados</p>
+    <p>Rua João Bueno, 155, Guarulhos, SP</p>
+  </div>
+</footer>
 </body>
 </html>

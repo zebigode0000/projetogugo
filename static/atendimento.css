@@ -26,7 +26,7 @@ body {
 }
 
 
-ul {
+.ul-nav {
   list-style: none;
   display: flex;
   gap: 20px;
@@ -34,7 +34,7 @@ ul {
   padding: 0;
 }
 
-ul li a {
+.ul-nav li a {
   cursor: pointer;
   position: relative;
   display: block;
@@ -47,7 +47,7 @@ ul li a {
   border-radius: 15px;
   transition: background-color 0.3s ease;
 }
-ul li ::after {
+.ul-nav li ::after {
   content: '';
   position: absolute;
   left: 0;
@@ -58,10 +58,10 @@ ul li ::after {
   transition: width 0.3s ease;
 }
 
-ul li :hover::after {
+.ul-nav li :hover::after {
   width: 100%;
 }
-ul li :hover{
+.ul-nav li :hover{
   color: #b4977b;
 }
 
@@ -78,13 +78,13 @@ ul li :hover{
     margin-bottom: 10px;
   }
 
-  ul {
+  .ul-nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
   }
 
-  ul li a {
+  .ul-nav li a {
     padding: 8px 12px;
     font-size: 10px;
     font-family: "Montserrat", sans-serif;
@@ -249,6 +249,7 @@ footer {
 .footer-column {
   min-width: 220px;
   flex-direction: column;
+  text-align: center;
 }
 
 .footer-logo {
@@ -296,7 +297,7 @@ footer {
 }
 
 .footer-column ul li a:hover {
-  color: #fff;
+  color: #b4977b;
 }
 .instagram-icon{
   width: 10%;
