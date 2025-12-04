@@ -1,0 +1,4 @@
+Flask
+# Se você usa o modelo de MVC do Flask, adicione o que mais precisa:
+# Flask-SQLAlchemy
+# ...
