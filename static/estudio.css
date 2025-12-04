@@ -91,7 +91,9 @@ body {
     font-size: medium;
   }
 }
-
+section{
+  margin-top: 50px;
+}
   .texto1{
     color: aliceblue;
     display: flex;
