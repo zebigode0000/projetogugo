@@ -2,9 +2,9 @@ from main import app
 from flask import render_template
 
 #rotas
-@app.route("/home") 
+@app.route("/index") 
 def home(): 
-    return render_template("home.html")
+    return render_template("index.html")
 
 @app.route("/galeria") 
 def galeria(): 
