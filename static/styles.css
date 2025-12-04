@@ -169,6 +169,13 @@ p {
 
 
 @media (max-width: 900px) {
+  .banner{
+    text-align: left;
+    padding: 10px;
+  }
+  .conteudo h1{
+    font-size: 40px;
+  }
   .sobre picture img {
     height: 250px;
     width: 90%;
