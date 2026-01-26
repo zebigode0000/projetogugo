@@ -18,6 +18,16 @@ function showGallery(id) {
     selected.style.display = 'grid';
   }
 }
+function abrirModal(src) {
+    const modal = document.getElementById('modal-zoom');
+    const imgModal = document.getElementById('img-modal');
+    imgModal.src = src; 
+    modal.classList.remove('hidden'); 
+}
+
+function fecharModal() {
+    document.getElementById('modal-zoom').classList.add('hidden'); // Esconde o modal
+}
 </script>
 </head>
 <body>
@@ -44,90 +54,329 @@ function showGallery(id) {
             <button class="button-css" onclick="showGallery('edgar')">Edgar</button>
             <button class="button-css" onclick="showGallery('gislaine')">Gislaine</button>
             <button class="button-css" onclick="showGallery('shira')">Shira</button>
-            <button class="button-css" onclick="showGallery('luana')">Luana</button>  
+            <button class="button-css" onclick="showGallery('luana')">Luana</button>
+            <button class="button-css" onclick="showGallery('eryck')">Eryck</button>  
     </div>
 
     <div class="gallery" id="gugo">
-        <a href="#img-gugo-1">
-        <img
-        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo1.png') }}"
-        alt="Gugo Tattoo 1"
+        <img 
+        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo1.png') }}" 
+        onclick="abrirModal(this.src)" 
         class="cursor-pointer transition-transform duration-300 hover:scale-105"
-        />
-        </a>
-        <a href="#img-gugo-1">
-        <img
-        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
-        alt="Gugo Tattoo 1"
+    >
+        <img 
+        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo2.png') }}" 
+        onclick="abrirModal(this.src)" 
         class="cursor-pointer transition-transform duration-300 hover:scale-105"
-        />
-        </a>
-        <a href="#img-gugo-1">
-        <img
-        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
-        alt="Gugo Tattoo 1"
+    >
+        <img 
+        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo3.png') }}" 
+        onclick="abrirModal(this.src)" 
         class="cursor-pointer transition-transform duration-300 hover:scale-105"
-        />
-        </a>
-        <a href="#img-gugo-1">
-        <img
-        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
-        alt="Gugo Tattoo 1"
+    >
+        <img 
+        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo4.png') }}" 
+        onclick="abrirModal(this.src)" 
         class="cursor-pointer transition-transform duration-300 hover:scale-105"
-        />
-        </a>
-        <a href="#img-gugo-1">
-        <img
-        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
-        alt="Gugo Tattoo 1"
+    >
+        <img 
+        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo5.png') }}" 
+        onclick="abrirModal(this.src)" 
         class="cursor-pointer transition-transform duration-300 hover:scale-105"
-        />
-        </a>
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo6.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo7.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo8.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo9.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo10.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo11.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+        
     </div>
     <div class="gallery" id="edgar">
-        <a href="#img-gugo-1">
-        <img
-        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
-        alt="Gugo Tattoo 1"
+        <img 
+        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo1.png') }}" 
+        onclick="abrirModal(this.src)" 
         class="cursor-pointer transition-transform duration-300 hover:scale-105"
-        />
-        </a>
-        <a href="#img-gugo-1">
-        <img
-        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
-        alt="Gugo Tattoo 1"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo2.png') }}" 
+        onclick="abrirModal(this.src)" 
         class="cursor-pointer transition-transform duration-300 hover:scale-105"
-        />
-        </a>
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo3.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo4.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo5.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo6.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo7.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo8.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo9.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/edgartattoo/tattoo10.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
     </div>
     <div class="gallery" id="gislaine">
-        <a href="#img-gugo-1">
-        <img
-        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
-        alt="Gugo Tattoo 1"
+        <img 
+        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo1.png') }}" 
+        onclick="abrirModal(this.src)" 
         class="cursor-pointer transition-transform duration-300 hover:scale-105"
-        />
-        </a>
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo2.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo3.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo4.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo5.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo6.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo7.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo8.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo9.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/gihtattoo/tattoo10.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
     </div>
 
     <div class="gallery" id="shira">
-        <a href="#img-gugo-1">
-        <img
-        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
-        alt="Gugo Tattoo 1"
+        <img 
+        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo1.png') }}" 
+        onclick="abrirModal(this.src)" 
         class="cursor-pointer transition-transform duration-300 hover:scale-105"
-        />
-        </a>
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo2.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo3.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo4.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo5.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo6.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo7.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo8.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo9.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/shiratattoo/tattoo10.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
     </div>
 
     <div class="gallery" id="luana">
-        <a href="#img-gugo-1">
-        <img
-        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
-        alt="Gugo Tattoo 1"
+        <img 
+        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo1.png') }}" 
+        onclick="abrirModal(this.src)" 
         class="cursor-pointer transition-transform duration-300 hover:scale-105"
-        />
-        </a>
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo2.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo3.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo4.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo5.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo6.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo7.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo8.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo9.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/luanatattoo/tattoo10.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    </div>
+    <div class="gallery" id="eryck">
+        <img 
+        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo1.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo2.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo3.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo4.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo5.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo6.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo7.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo8.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo9.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
+    <img 
+        src="{{ url_for('static', filename='imagens/erycktattoo/tattoo10.png') }}" 
+        onclick="abrirModal(this.src)" 
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+    >
     </div>
 </section>
 <footer>
@@ -166,19 +415,13 @@ function showGallery(id) {
     <p>Rua João Bueno, 155, Guarulhos, SP</p>
   </div>
 </footer>
-<a
-  href="#"
-  id="img-gugo-1"
-  class="fixed inset-0 flex items-center justify-center
-         bg-black/90 opacity-0 pointer-events-none
-         transition-opacity duration-300
-         target:opacity-100 target:pointer-events-auto z-50"
+<div 
+  id="modal-zoom" 
+  class="hidden fixed inset-0 flex items-center justify-center bg-black/90 z-50"
+  onclick="fecharModal()"
 >
-  <img
-    src="{{ url_for('static', filename='imagens/tatuu.png') }}"
-    class="max-w-[70%] max-h-[70%] rounded-lg"
-  />
-</a>
+  <img id="img-modal" src="" class="max-w-[80%] max-h-[80%] rounded-lg shadow-2xl">
+</div>
 
 </body>
 </html>
