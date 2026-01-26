@@ -97,7 +97,7 @@ body {
   height: 100vh;
   background: 
     linear-gradient(to right, rgba(0, 0, 0, 0.9) 35%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 9)),
-    url('imagens/bannerest.jpg') center/cover no-repeat;
+    url('imagens/bannerestudio.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   padding-left: 100px;
