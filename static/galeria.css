@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000;
+  overflow-x: hidden;
 }
  nav {
   text-transform: uppercase;
@@ -11,7 +12,8 @@ body {
   justify-content: space-between;
   padding: 10px 5%;
   position: fixed;
-  width: 90vw;
+  width: 100%;
+  box-sizing: border-box;
   top: 0;
   z-index: 1000;
   background-color: #000;
@@ -153,7 +155,8 @@ body {
     color: aliceblue;
     border-radius: 15px;
     width: 100px;
-    height: 50px;
+    word-wrap: break-word;
+    height: 60px;
     transition: 0.5s ease;
     border: 2px solid #b4977b;
     font-family: "Montserrat", sans-serif;
@@ -172,21 +175,53 @@ body {
   transform: scale(1.1);}
 
 .gallery {
-  display: none; /* escondida por padrão */
-  text-align: center;
-  margin-top: 20px;
+  display: none;
+  margin: 30px auto;
+  max-width: 1000px; 
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.gallery a {
+  max-width: 100%;
+  width: 100%;
+  height: 220px; 
+  display: block;
 }
 
 .gallery img {
-  width: 150px;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
-  margin: 5px;
   transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
   transform: scale(1.1);
 }
+@media (max-width: 600px) {
+  .gallery a {
+    height: 160px;
+  }
+}
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
 footer {
   background-color: #0d0d0d;
   color: #d1d1d1;

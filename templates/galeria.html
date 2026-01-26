@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='galeria.css') }}?v={{ time }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
 function showGallery(id) {
   // esconde todas as galerias
@@ -13,7 +15,7 @@ function showGallery(id) {
   // mostra apenas a escolhida
   const selected = document.getElementById(id);
   if (selected) {
-    selected.style.display = 'block';
+    selected.style.display = 'grid';
   }
 }
 </script>
@@ -46,26 +48,86 @@ function showGallery(id) {
     </div>
 
     <div class="gallery" id="gugo">
-        <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Gugo Tattoo 1">
-        <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Gugo Tattoo 2">
-        <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Gugo Tattoo 3">
-        <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Gugo Tattoo 3">
-        <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Gugo Tattoo 3">
+        <a href="#img-gugo-1">
+        <img
+        src="{{ url_for('static', filename='imagens/gugotattoo/tattoo1.png') }}"
+        alt="Gugo Tattoo 1"
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+        />
+        </a>
+        <a href="#img-gugo-1">
+        <img
+        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
+        alt="Gugo Tattoo 1"
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+        />
+        </a>
+        <a href="#img-gugo-1">
+        <img
+        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
+        alt="Gugo Tattoo 1"
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+        />
+        </a>
+        <a href="#img-gugo-1">
+        <img
+        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
+        alt="Gugo Tattoo 1"
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+        />
+        </a>
+        <a href="#img-gugo-1">
+        <img
+        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
+        alt="Gugo Tattoo 1"
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+        />
+        </a>
     </div>
     <div class="gallery" id="edgar">
-        <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Edgar 1">
-        <img src="{{ url_for('static', filename='imagens/tatuu.png') }}" alt="Edgar 2">
+        <a href="#img-gugo-1">
+        <img
+        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
+        alt="Gugo Tattoo 1"
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+        />
+        </a>
+        <a href="#img-gugo-1">
+        <img
+        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
+        alt="Gugo Tattoo 1"
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+        />
+        </a>
     </div>
     <div class="gallery" id="gislaine">
-        <img src="gis1.jpg" alt="Gislaine 1">
+        <a href="#img-gugo-1">
+        <img
+        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
+        alt="Gugo Tattoo 1"
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+        />
+        </a>
     </div>
 
     <div class="gallery" id="shira">
-        <img src="shira1.jpg" alt="Shira 1">
+        <a href="#img-gugo-1">
+        <img
+        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
+        alt="Gugo Tattoo 1"
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+        />
+        </a>
     </div>
 
     <div class="gallery" id="luana">
-        <img src="luana1.jpg" alt="Luana 1">
+        <a href="#img-gugo-1">
+        <img
+        src="{{ url_for('static', filename='imagens/tatuu.png') }}"
+        alt="Gugo Tattoo 1"
+        class="cursor-pointer transition-transform duration-300 hover:scale-105"
+        />
+        </a>
     </div>
 </section>
 <footer>
@@ -104,5 +166,19 @@ function showGallery(id) {
     <p>Rua João Bueno, 155, Guarulhos, SP</p>
   </div>
 </footer>
+<a
+  href="#"
+  id="img-gugo-1"
+  class="fixed inset-0 flex items-center justify-center
+         bg-black/90 opacity-0 pointer-events-none
+         transition-opacity duration-300
+         target:opacity-100 target:pointer-events-auto z-50"
+>
+  <img
+    src="{{ url_for('static', filename='imagens/tatuu.png') }}"
+    class="max-w-[70%] max-h-[70%] rounded-lg"
+  />
+</a>
+
 </body>
 </html>
