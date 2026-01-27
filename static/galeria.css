@@ -92,6 +92,12 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: medium;
   }
+  .ul-nav li :hover::after {
+  display: none;
+}
+.ul-nav li ::after {
+  display: none;
+}
 }
 .banner-galeria{
     z-index: 1;
