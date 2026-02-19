@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000;
+  overflow-x: hidden;
 }
  nav {
   text-transform: uppercase;
@@ -11,7 +12,7 @@ body {
   justify-content: space-between;
   padding: 10px 5%;
   position: fixed;
-  width: 90vw;
+  width: 100vw;
   top: 0;
   z-index: 1000;
   background-color: #000;
@@ -103,7 +104,7 @@ body {
   height: 100vh;
   background: 
     linear-gradient(to right, rgba(0, 0, 0, 0.9) 35%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 9)),
-    url('imagens/bannerestudio.png') center/cover no-repeat;
+    url('imagens/bannerestudio.webp') center/cover no-repeat;
   display: flex;
   align-items: center;
   padding-left: 100px;
@@ -130,10 +131,8 @@ h1 span {
 }
 
 p {
-  margin-top: 20px;
   font-weight: 300;
   line-height: 1.6;
-  color: #ccc;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -157,24 +156,23 @@ p {
 
 .sobre {
     background-color: #000;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 40px;
     font-family: "Montserrat", sans-serif;
     position: relative;
-    margin-top: 4%;
 
 }
 
 .sobre img{
-    margin: 6%;
-    width:350px;
-    height: auto;
+    width:100%;
+    height: 500px;
     object-fit: cover;
     object-position: center;
-    border-radius: 15px;
+    padding:0px 40px;
 }
 
-
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .banner{
     text-align: left;
     padding: 10px;
@@ -183,12 +181,13 @@ p {
     font-size: 40px;
   }
   .sobre picture img {
-    height: 250px;
-    width: 90%;
+    width: 100%;
+    height: 300px;
     
   }
   .sobre {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+
   }
 }
 
@@ -213,7 +212,7 @@ p {
     font-family: "Montserrat", sans-serif;
 } 
 .conteudo2 p{
-  max-width: 1700px;
+  max-width: 100vw;
   margin-left: 30px;
   margin-right: 30px;
   
@@ -228,106 +227,163 @@ p {
 }
 
 h1 {
-      text-align: center;
-      font-family: "Montserrat", sans-serif;
-      text-transform: uppercase;
-      margin-top: 7%;
-      color: white;
-      font-size: 45px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-size: 4vw;
+}
+
+/* Container principal */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* A janela que esconde o excesso */
+.carousel-viewport {
+    width: 100%;
+    overflow: hidden; /* Remove o scroll de vez */
+}
+
+/* A linha que move os cards */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+    padding: 20px 0;
+    /* Remove propriedades de scroll manual */
+    overflow-x: visible; 
+}
+
+.card {
+    flex: 0 0 300px; /* Largura fixa para o cálculo do JS funcionar */
+    background-color: #222;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+}
+.card h3{
+  text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.card h3, .card p {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    padding: 5px;
+}
+
+/* Botões de navegação */
+.prev-btn, .next-btn {
+    background: #b4977b;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: #6b5949;
+}
+
+/* Ajustes dos botões internos do card */
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 15px 20px;
+    gap: 10px;
+}
+
+.button {
+    border-radius: 15px;
+    flex: 1;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #b4977b;
+    transition: 0.3s;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 550;
+}
+
+.button:hover {
+    background-color: #6b5949;
+}
+
+/* --- RESPONSIVIDADE --- */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px; /* Título menor no celular */
+        margin-top: 15%;
     }
 
-    .carousel {
-      display: flex;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      padding: 20px;
-      gap: 20px;
-    }
-
-    .carousel::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    .carousel::-webkit-scrollbar-thumb {
-      background-color: #444;
-      border-radius: 10px;
+    .carousel-container {
+        width: 100%; /* Usa toda a largura no mobile */
     }
 
     .card {
-      flex: 0 0 auto;
-      background-color: #222;
-      border-radius: 15px;
-      width: 250px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
+        /* No celular, o card ocupa 85% da largura da tela para mostrar um pedaço do próximo */
+        flex: 0 0 85vw; 
+        min-width: 85vw;
     }
 
     .card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 15px 15px 0 0;
+        height: 200px; /* Imagem um pouco menor */
     }
 
-    .card h3 {
-      margin: 10px 0 5px;
-      color: white;
-      font-family: "Montserrat", sans-serif;
+    /* Ajusta botões para não ficarem em cima do conteúdo no mobile */
+    .prev-btn, .next-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
     }
-
-    .card p {
-      color: #bbb;
-      padding: 0 10px 15px;
-      font-family: "Montserrat", sans-serif;
-    }
+    
+    .prev-btn { left: 5px; }
+    .next-btn { right: 5px; }
 
     .botoes {
-      text-decoration: none;
-      display: flex;
-      justify-content: space-between;
-      margin: 0px 20px 15px 20px;
-      
+        flex-direction: column; /* Botões um em cima do outro no celular */
+        gap: 8px;
     }
 
     .button {
-      border-radius: 15px;
-      width: 45%;
-      height: 50px;
-      background-color: transparent;
-      color: white;
-      font-family: "Montserrat", sans-serif;
-      font-size: medium;
-      font-weight: 550;
-      border-color: #b4977b;
-      transition: 0.5s ease;
-      overflow: hidden;
+        width: 100%;
+        padding: 10px 0px;
     }
-    .button a{
-      display: flex;                  
-      align-items: center;            
-      justify-content: center;        
-      width: 100%;
-      height: 100%;
-      transition: 0.05s ease;
-      text-decoration: none;
-      color: white;
-    }
-
-    .botoes :hover{
-      background-color: #6b5949;
-      cursor: pointer;
-      transform: scale(1.02);
-      font-weight: 550;
-    }
-    .botoes a:hover{
-      background-color: transparent;
-      
-    }
+}
 
     .clienteh1{
       margin-top: 10%;
@@ -342,101 +398,113 @@ h1 {
       font-family: "Montserrat", sans-serif;
       font-size: 20px;
     }
-    .avaliacoes {
-      display: flex;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      padding: 20px;
-      gap: 20px;}
-    
-    .avaliacoes::-webkit-scrollbar {
-      height: 8px;
-    }
+    /* Container que esconde o que sai da tela */
+/* Container que oculta o scroll manual */
+.avaliacoes-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 60px 0;
+    position: relative;
+    background: #000;
+}
 
-    .avaliacoes::-webkit-scrollbar-thumb {
-      background-color: #444;
-      border-radius: 10px;
-    }
-    
-    .individual{
-      flex: 0 0 auto;
-      background-color: #222;
-      border-radius: 15px;
-      width: 250px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
-      }
-    .individual p{
-      margin-left: 5px;
-      margin-right: 5px;
-    }
-    .estrelas {
-      width: 5px;
-      font-size: 24px; 
-      color: #b4977b;
-      display: inline;
-    }
-    hr{
-      margin-left: 15px;
-      margin-right: 15px;
-      background-color: #b4977b;
-      height: 1px;
-      border: none;
-    }
-    .avaliah3{
-      color: white;
-      text-align: left;
-      margin-left: 2.5%;
-      font-family: "Montserrat", sans-serif;
-    }
-    .avaliap{
-      text-align: left;
-      margin-left: 10%;
-      margin-top: -20px;
-    }
-    .avaliabt{
-      text-align: center;
-      margin-top: 5%;
-      margin-bottom: 10%;
-    }
-    .bt{
-      border-radius: 15px;
-      width: 30%;
-      height: 60px;
-      background-color: transparent;
-      color: white;
-      font-family: "Montserrat", sans-serif;
-      font-size: medium;
-      font-weight: 550;
-      border-color: #b4977b;
-      text-transform: uppercase;
-      transition: 0.5s ease;
-      overflow: hidden;
-    }
-    .bt a{
-      color: white;
-      text-decoration: none;
-      background-color: transparent;
-      width: 100%;
-      height: 100%;
-      display: flex;                
-      align-items: center;          
-      justify-content: center; 
-    }
-    .avaliabt :hover{
-      background-color: #6b5949;
-      cursor: pointer;
-      transform: scale(1.02);
-    }
-    .avaliabt a:hover{
-      background-color: transparent;
-    }
+/* Trilho que desliza */
+.avaliacoes-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    will-change: transform;
+}
+
+/* Card Individual Estilizado */
+.individual {
+    flex: 0 0 350px; /* Largura fixa para preencher melhor a tela */
+    background: #121212;
+    border-radius: 20px;
+    padding: 40px 25px 25px 25px;
+    position: relative;
+    border: 1px solid #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Aspas Decorativas */
+.quote-icon {
+    font-family: serif;
+    font-size: 80px;
+    color: #b4977b;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.review-text {
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #ccc !important;
+    margin-bottom: 20px;
+    min-height: 100px;
+    text-align: center;
+}
+
+/* Footer do Card (Estrelas + Google) */
+.stars-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.stars {
+    color: #fbbc05; /* Amarelo Google */
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.google-mini-logo {
+    width: 65px;
+    height: auto;
+}
+
+.individual hr {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 15px 0;
+}
+
+.avaliah3 {
+    font-size: 17px;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.avaliap {
+    font-size: 12px !important;
+    color: #b4977b !important;
+    margin: 5px 0 0 0 !important;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Pausa no Hover */
+.avaliacoes-container:hover .avaliacoes-track {
+    cursor: grab;
+}
     .bannerorç{
       text-align: center;
       background: 
       linear-gradient(90deg,rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0.75) 100%),
-      url('imagens/tatuu.png') center/cover no-repeat;
+      url('imagens/tatuu.webp') center/cover no-repeat;
       position: relative;
       width: 100%;
       height: 70vh;
@@ -612,3 +680,4 @@ h1 {
 footer {
   background-color: #000;
 }
+
