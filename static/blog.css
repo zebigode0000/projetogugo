@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: white;
+  overflow-x: hidden;
+}
+/* Estilo do Botão Hambúrguer (Escondido no Desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+/* Responsividade Mobile (Máximo 900px conforme seu código) */
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: flex; /* Mostra o hambúrguer */
+        z-index: 1001;
+    }
+
+    .ul-nav {
+        position: fixed;
+        right: -100%; /* Esconde a aba para a direita */
+        top: 0;
+        flex-direction: column !important;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 70%; /* Largura da aba lateral */
+        height: 100vh;
+        padding-top: 100px;
+        transition: 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* Quando a classe 'active' for adicionada pelo JS */
+    .ul-nav.active {
+        right: 0;
+    }
+
+    .ul-nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Animação do Hambúrguer virando "X" */
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+ nav {
+  text-transform: uppercase;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5%;
+  position: fixed;
+  width: 100vw;
+  z-index: 1000;
+  background-color: #000;
+}
+
+
+.logo img {
+  height: 60px;          
+  width: auto;           
+  max-width: 100%;       
+  transition: 0.3s ease; 
+}
+
+
+.ul-nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.ul-nav li a {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: larger;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+}
+.ul-nav li ::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #b4977b;
+  transition: width 0.3s ease;
+}
+
+.ul-nav li :hover::after {
+  width: 100%;
+}
+.ul-nav li :hover{
+  color: #b4977b;
+}
+
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 45px; 
+    margin-bottom: 10px;
+  }
+
+  .ul-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .ul-nav li a {
+    padding: 8px 12px;
+    font-size: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: medium;
+  }
+  .ul-nav li :hover::after {
+  display: none;
+}
+.ul-nav li ::after {
+  display: none;
+}}
