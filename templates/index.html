@@ -85,7 +85,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}?v={{ time }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body class="overflow-x-hidden">
     
     <nav>
     <div class="logo">
@@ -119,7 +119,7 @@
     </span>
 </a>
 
-    <section class="banner"> 
+    <section class="banner overflow-x-hidden"> 
     <div class="conteudo">
     <h1 class="animar-esquerda">Tatuagens <span style="color: #b4977b;">Autorais</span> em Guarulhos</span></h1>
     <p class="text-white animar-esquerda">
@@ -130,7 +130,7 @@
    target="_blank" class="botao aparecer">AGENDE SEU HORÁRIO</a>
   </div>
 </section>
-<section class="sobre py-4">
+<section class="sobre py-4 overflow-x-hidden">
   <div class="rounded-xl">
     <picture>
         <source media="(max-width: 900px )" srcset="{{ url_for('static', filename='imagens/sobre1.webp') }}">
@@ -156,7 +156,7 @@
       <br><br>
     </div>
 </section>
-<section class="py-4">
+<section class="py-4 overflow-x-hidden">
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-6 bg-black">
   <div class="aparecer flex flex-col items-start p-5 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-gold-500 transition-all group">
     <div class="mb-4 text-amber-500 bg-amber-500/10 p-2 rounded-lg group-hover:bg-amber-500 group-hover:text-black transition-colors">
@@ -303,7 +303,7 @@
                         <span class="bg-[#b4977b] text-black text-[10px] font-bold px-2 py-0.5 uppercase tracking-tighter">Essencial</span>
                         <span class="text-zinc-500 text-[10px] uppercase tracking-widest">10 Mar 2026</span>
                     </div>
-                    <h3 class="text-3xl md:text-4xl font-light text-white mb-4 group-hover:text-[#b4977b] transition-colors duration-300">
+                    <h3 class="text-3xl md:text-4xl font-semibold text-white mb-4 group-hover:text-[#b4977b] transition-colors duration-300">
                         Guia Definitivo: Cicatrização Pós-Tattoo
                     </h3>
                     <p class="text-zinc-400 font-light leading-relaxed max-w-2xl mb-6">
@@ -365,7 +365,7 @@
 </section>
 <section class="avaliamento">
     <h1 class="clienteh1 aparecer"><strong>O que nossos clientes dizem</strong></h1>
-    <p class="clientep">Confiança e satisfação comprovadas</p>
+    <p class="clientep text-white">Confiança e satisfação comprovadas</p>
 
     <div class="avaliacoes-container">
         <div class="avaliacoes-track" id="reviewTrack">
