@@ -4,6 +4,58 @@ body {
   background-color: #000;
   overflow-x: hidden;
 }
+/* Estilo do Botão Hambúrguer (Escondido no Desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+/* Responsividade Mobile (Máximo 900px conforme seu código) */
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: flex; /* Mostra o hambúrguer */
+        z-index: 1001;
+    }
+
+    .ul-nav {
+        position: fixed;
+        right: -100%; /* Esconde a aba para a direita */
+        top: 0;
+        flex-direction: column !important;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 70%; /* Largura da aba lateral */
+        height: 100vh;
+        padding-top: 100px;
+        transition: 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* Quando a classe 'active' for adicionada pelo JS */
+    .ul-nav.active {
+        right: 0;
+    }
+
+    .ul-nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Animação do Hambúrguer virando "X" */
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
  nav {
   text-transform: uppercase;
   font-size: 13px;
@@ -514,6 +566,41 @@ h1 {
       box-sizing: border-box;
       margin-top: 70px;
     }
+    /* O container já esconde o que sai da tela */
+.avaliacoes-container {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+}
+
+/* O trilho que vai deslizar */
+.avaliacoes-track {
+    display: flex;
+    gap: 30px; /* Mantenha o gap que você já usa */
+    width: max-content;
+    animation: scroll-infinito 40s linear infinite; /* Ajuste os segundos para mudar a velocidade */
+}
+
+/* Pausa a animação quando o usuário passa o mouse */
+.avaliacoes-container:hover .avaliacoes-track {
+    animation-play-state: paused;
+}
+
+/* Definição do movimento */
+@keyframes scroll-infinito {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        /* Ele vai deslizar exatamente metade do trilho (o conteúdo duplicado) */
+        transform: translateX(-50%);
+    }
+}
+
+/* Ajuste para o card não encolher */
+.individual {
+    flex: 0 0 350px; 
+}
     
     .h1orç{
       text-align: center;
@@ -543,6 +630,8 @@ h1 {
       transition: 0.5s ease;
       box-shadow: 0.2px 0.2px 20px  rgb(61, 61, 61);
       margin-bottom: 15%;
+      padding: 10px 30px;
+      
     }
 
     .button-animate :hover{

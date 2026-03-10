@@ -47,14 +47,14 @@
   "image": "https://www.gugotatto.com.br/imagens/estudio-gugo-tatto.jpg",
   "@id": "https://www.gugotatto.com.br/",
   "url": "https://www.gugotatto.com.br/",
-  "telephone": "+55 11 99999-9999",
+  "telephone": "+55 (11) 99210-5793",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Rua Exemplo, 123",
+    "streetAddress": "Rua João Bueno, 155",
     "addressLocality": "Guarulhos",
     "addressRegion": "SP",
-    "postalCode": "07000-000",
+    "postalCode": "07114-420",
     "addressCountry": "BR"
   },
   "geo": {
@@ -88,24 +88,33 @@
 <body>
     
     <nav>
-        <div class="logo ">
-            <a href="#"><img src="{{ url_for('static', filename='imagens/gugologo.webp') }}" class="animar-esquerda"></a>
-        </div>
-        <ul class="ul-nav aparecer">
-            <li><a href="/" class="active"><strong>home</strong></a></li>
-            <li><a href="/galeria"><strong>Galeria</strong></a></li>
-            <li><a href="/estudio"><strong>Estudio</strong></a></li>
-            <li><a href="/atendimento"><strong>Atendimento</strong></a></li>
-        </ul>
-    </nav>
+    <div class="logo">
+        <a href="#"><img src="{{ url_for('static', filename='imagens/gugologo.webp') }}" class="animar-esquerda"></a>
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar">sdf</span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <ul class="ul-nav aparecer" id="nav-list">
+        <li><a href="/" class="active"><strong>home</strong></a></li>
+        <li><a href="/galeria"><strong>Galeria</strong></a></li>
+        <li><a href="/estudio"><strong>Estudio</strong></a></li>
+        <li><a href="/atendimento"><strong>Atendimento</strong></a></li>
+    </ul>
+</nav>
+
     <section class="banner"> 
     <div class="conteudo">
-    <h1 class="animar-esquerda">MARQUE <br><span>HISTÓRIA</span></h1>
+    <h1 class="animar-esquerda">Tatuagens <span style="color: #b4977b;">Autorais</span> em Guarulhos</span></h1>
     <p class="text-white animar-esquerda">
       Cada detalhe é planejado com cuidado, <br>
       garantindo qualidade e conforto em todo o processo. <br>
     </p>
-    <a href="#" class="botao aparecer">AGENDE SEU HORÁRIO</a>
+    <a href="https://wa.me/5511992105793?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20fazer%20uma%20tatuagem." 
+   target="_blank" class="botao aparecer">AGENDE SEU HORÁRIO</a>
   </div>
 </section>
 <section class="sobre py-4">
@@ -117,30 +126,50 @@
     </div>
     <div class="conteudo2 text-white">
       <h1 class="animar-direita"><strong>SOBRE NÓS</strong></h1>
-      <p class="animar-direita">No <strong>Gugo Tattoo</strong>, a arte é levada a sério, e <strong>cada traço conta uma história</strong>. 
-      Localizado no coração de <strong>Guarulhos (SP)</strong>, o estúdio se tornou referência em tatuagens e piercings pela combinação perfeita entre <strong>técnica, criatividade e segurança</strong>. 
-      <br>Aqui, cada cliente é <strong>único</strong>. O processo começa com uma conversa, uma ideia, um sentimento. 
-      A partir disso, transformamos o que está na mente em <strong>arte permanente</strong>, feita com dedicação, precisão e respeito pela pele. 
-      <br>Nosso compromisso vai além da estética. Trabalhamos com <strong>materiais esterilizados</strong>, ambiente higienizado e <strong>profissionais experientes</strong>, garantindo não só resultados incríveis, mas também uma <strong>experiência segura e tranquila</strong> do início ao fim. 
-      <br>Mais do que um estúdio, o <strong>Gugo Tattoo</strong> é um espaço onde a <strong>arte respira</strong>, onde cada agulha traduz <strong>emoção</strong>, e cada desenho carrega um pedaço de quem você é. 
-      <br><strong>Dor, tinta e alma</strong> se encontram aqui para criar <strong>algo eterno</strong>. </p>
+      <p class="animar-direita">No <strong>Gugo Tattoo</strong>, transformamos ideias em <strong>arte na pele</strong> com máxima precisão. 
+  Localizado estrategicamente em <strong>Guarulhos (SP)</strong>, nosso estúdio é referência para quem busca 
+  <strong>tatuagens exclusivas</strong> e <strong>aplicação de piercing</strong> com total segurança e biossegurança.
+  <br><br>
+  Especialistas em diversos estilos, do <strong>Fine Line ao Realismo</strong>, acreditamos que cada traço conta uma história. 
+  Seja para sua <strong>primeira tatuagem</strong> ou para um projeto de fechamento, entregamos 
+  <strong>arte permanente</strong> feita com materiais de alta qualidade e pigmentos aprovados.
+  <br><br>
+  Nosso compromisso com a saúde é rigoroso: trabalhamos em um ambiente 100% higienizado, utilizando 
+  <strong>materiais descartáveis e esterilizados</strong>. Nossa equipe de <strong>tatuadores profissionais em Guarulhos</strong> 
+  garante uma experiência confortável, transformando dor e tinta em uma expressão única de identidade.
+  <br><br>
+  Venha conhecer o <strong>melhor estúdio de tatuagem de Guarulhos</strong> e traduza sua emoção em um desenho eterno. 
+  <strong>Gugo Tattoo: Arte, técnica e alma.</strong></p>
       <br><br>
     </div>
 </section>
 <section class="py-4">
-  <div class="grid grid-cols-1 md:grid-cols-4 p-4 gap-4 text-white">
-    <div class="aparecer bg-gray-800/20 backdrop-blur-md p-4 rounded-xl border border-[#B4977B] shadow-lg shadow-black/10 flex justify-center items-center font-bold ">
-      <h4 class=""><i class="fa-solid fa-check icone-bege pr-2"></i>10 anos de profissionalismo</h4>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-6 bg-black">
+  <div class="aparecer flex flex-col items-start p-5 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-gold-500 transition-all group">
+    <div class="mb-4 text-amber-500 bg-amber-500/10 p-2 rounded-lg group-hover:bg-amber-500 group-hover:text-black transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-clock-icon lucide-calendar-clock"><path d="M16 14v2.2l1.6 1"/><path d="M16 2v4"/><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/><path d="M3 10h5"/><path d="M8 2v4"/><circle cx="16" cy="16" r="6"/></svg>
     </div>
-    <div class="aparecer bg-gray-800/20 backdrop-blur-md p-4 rounded-xl border border-[#B4977B] shadow-lg shadow-black/10 flex justify-center items-center font-bold">
-      <h4><i class="fa-solid fa-check icone-bege pr-2"></i>Criações exclusivas</h4>
+    <h3 class="text-white font-semibold text-lg leading-tight">+10 Anos no Mercado</h3>
+  </div>
+  <div class="aparecer flex flex-col items-start p-5 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-gold-500 transition-all group">
+    <div class="mb-4 text-amber-500 bg-amber-500/10 p-2 rounded-lg group-hover:bg-amber-500 group-hover:text-black transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gem-icon lucide-gem"><path d="M10.5 3 8 9l4 13 4-13-2.5-6"/><path d="M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.247 0l-7.99-10.986A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z"/><path d="M2 9h20"/></svg>
     </div>
-    <div class="aparecer bg-gray-800/20 backdrop-blur-md p-4 rounded-xl border border-[#B4977B] shadow-lg shadow-black/10 flex justify-center items-center font-bold">
-      <h4><i class="fa-solid fa-check icone-bege pr-2"></i>Ambiente confortavel e amigavel</h4>
+    <h3 class="text-white font-semibold text-lg leading-tight">Experiência Premium e Relaxante</h3>
+  </div>
+  <div class="aparecer flex flex-col items-start p-5 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-gold-500 transition-all group">
+    <div class="mb-4 text-amber-500 bg-amber-500/10 p-2 rounded-lg group-hover:bg-amber-500 group-hover:text-black transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
     </div>
-    <div class="aparecer bg-gray-800/20 backdrop-blur-md p-4 rounded-xl border border-[#B4977B] shadow-lg shadow-black/10 flex justify-center items-center font-bold">
-      <h4><i class="fa-solid fa-check icone-bege pr-2"></i>Autorizado pela ANVISA</h4>
+    <h3 class="text-white font-semibold text-lg leading-tight">Segurança Máxima: Certificado ANVISA</h3>
+  </div>
+  <div class="aparecer flex flex-col items-start p-5 bg-neutral-900 border border-neutral-800 rounded-xl hover:border-gold-500 transition-all group">
+    <div class="mb-4 text-amber-500 bg-amber-500/10 p-2 rounded-lg group-hover:bg-amber-500 group-hover:text-black transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-check-icon lucide-user-round-check"><path d="M2 21a8 8 0 0 1 13.292-6"/><circle cx="10" cy="8" r="5"/><path d="m16 19 2 2 4-4"/></svg>
     </div>
+    <h3 class="text-white font-semibold text-lg leading-tight">Projetos Exclusivos</h3>
+  </div>
+
   </div>
 </section>
 <section class="profissionais py-4">
@@ -156,60 +185,60 @@
     <div class="carousel-viewport">
         <div class="carousel" id="carouselSlider">
             
-            <div class="card">
+            <div class="card aparecer">
                 <img src="{{ url_for('static', filename='imagens/gugo1.webp') }}" alt="Gugo Tattoo">
                 <h3 class="font-bold text-2xl italic">Gugo Tattoo</h3>
-                <p>Especialista em realismo de alto impacto, Gugo transforma a pele em arte viva. Com técnica apurada, foca na precisão de texturas e sombras profundas para criar retratos que beiram a fotografia</p>
+                <p class="mx-2">Especialista em realismo de alto impacto, Gugo transforma a pele em arte viva. Com técnica apurada, foca na precisão de texturas e sombras profundas para criar retratos que beiram a fotografia</p>
                 <div class="botoes">
                     <button class="button"><a href="https://www.instagram.com/gugotattoo" target="_blank">Instagram</a></button>
                     <button class="button"><a href="/galeria">Portfolio</a></button>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card aparecer">
                 <img src="{{ url_for('static', filename='imagens/edgar.webp') }}" alt="Edgar">
                 <h3 class="font-bold text-2xl italic">Edgar</h3>
-                <p>Edgar domina o equilíbrio entre o impacto do realismo e a sutileza do fine line. Seja em grandes projetos ou artes minimalistas, entrega detalhes impecáveis com traços e sombras precisas.</p>
+                <p class="mx-2">Edgar domina o equilíbrio entre o impacto do realismo e a sutileza do fine line. Seja em grandes projetos ou artes minimalistas, entrega detalhes impecáveis com traços e sombras precisas.</p>
                 <div class="botoes">
                     <button class="button"><a href="https://www.instagram.com/eddy.tattoo" target="_blank">Instagram</a></button>
                     <button class="button"><a href="/galeria">Portfolio</a></button>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card aparecer">
                 <img src="{{ url_for('static', filename='imagens/gih.webp') }}" alt="Gislaine">
                 <h3 class="font-bold text-2xl italic">Gislaine</h3>
-                <p>Referência em tatuagens delicadas e ornamentais, Gislaine foca no público feminino. Seu trabalho une sofisticação e leveza, valorizando a estética do corpo com traços finos e elegantes.</p>
+                <p class="mx-2">Referência em tatuagens delicadas e ornamentais, Gislaine foca no público feminino. Seu trabalho une sofisticação e leveza, valorizando a estética do corpo com traços finos e elegantes.</p>
                 <div class="botoes">
                     <button class="button"><a href="https://www.instagram.com/gih.tattoo" target="_blank">Instagram</a></button>
                     <button class="button"><a href="/galeria">Portfolio</a></button>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card aparecer">
                 <img src="{{ url_for('static', filename='imagens/shira.webp') }}" alt="Shira">
                 <h3 class="font-bold text-2xl italic">Shira</h3>
-                <p>Mestre do traço ultra-fino, Shira cria artes sutis e cheias de significado. Seu estilo é marcado pela limpeza e harmonia, ideal para quem busca uma tatuagem minimalista com acabamento impecável.</p>
+                <p class="mx-2">Mestre do traço ultra-fino, Shira cria artes sutis e cheias de significado. Seu estilo é marcado pela limpeza e harmonia, ideal para quem busca uma tatuagem minimalista com acabamento impecável.</p>
                 <div class="botoes">
                     <button class="button"><a href="https://www.instagram.com/rshiratoritattoo" target="_blank">Instagram</a></button>
                     <button class="button"><a href="/galeria">Portfolio</a></button>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card aparecer">
                 <img src="{{ url_for('static', filename='imagens/eryck.webp') }}" alt="Eryck Tattoo">
                 <h3 class="font-bold text-2xl italic">Eryck Tattoo</h3>
-                <p>Especialista em realismo e mestre em coberturas (cover-up). Eryck utiliza sua técnica avançada para transformar tatuagens antigas em novas obras de arte, devolvendo a autoestima aos clientes.</p>
+                <p class="mx-2">Especialista em realismo e mestre em coberturas (cover-up). Eryck utiliza sua técnica avançada para transformar tatuagens antigas em novas obras de arte, devolvendo a autoestima aos clientes.</p>
                 <div class="botoes">
                     <button class="button"><a href="https://www.instagram.com/erycktattoo01/" target="_blank">Instagram</a></button>
                     <button class="button"><a href="/galeria">Portfolio</a></button>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card aparecer">
                 <img src="{{ url_for('static', filename='imagens/luana.webp') }}" alt="Luana">
                 <h3 class="font-bold text-2xl italic">Luana</h3>
-                <p>Luana dedica-se ao realismo com foco em suavidade e contraste. Captura expressões de forma fiel e artística, garantindo projetos sólidos e detalhados que impressionam pela fluidez das sombras.</p>
+                <p class="mx-2">Luana dedica-se ao realismo com foco em suavidade e contraste. Captura expressões de forma fiel e artística, garantindo projetos sólidos e detalhados que impressionam pela fluidez das sombras.</p>
                 <div class="botoes">
                     <button class="button"><a href="https://www.instagram.com/lua.lulitattoo" target="_blank">Instagram</a></button>
                     <button class="button"><a href="/galeria">Portfolio</a></button>
@@ -227,8 +256,9 @@
   <div class="orçconteudo">
     <h1 class="h1orç aparecer">pronto para sua proxima <br> <span>tatuagem</span></h1>
     <p class="porç text-white aparecer">Com dedicação, segurança e criatividade, damos vida à sua ideia através da tatuagem <br> Nosso compromisso é entregar arte de qualidade, feita com cuidado, técnica e o respeito que sua pele merece.</p>
-    <div class="button-animate">
-      <button class="buttonorç">fazer orçamento</button>
+    <div class="button-animate aparecer">
+      <a href="https://wa.me/5511992105793?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20fazer%20uma%20tatuagem." 
+   target="_blank" class="buttonorç">fazer orçamento</a>
     </div>
   </div>
 </section>
@@ -374,65 +404,42 @@
 function moveCarousel(direction) {
     const slider = document.getElementById('carouselSlider');
     const cards = document.querySelectorAll('.card');
-    const viewport = document.querySelector('.carousel-viewport');
+    const cardWidth = cards[0].offsetWidth; // Largura do card
+    const gap = 20; // O gap que você definiu no CSS
+    const totalCards = cards.length;
     
-    // Pega a largura real do card no momento (independente de ser desktop ou mobile)
-    const cardStyle = window.getComputedStyle(cards[0]);
-    const rect = cards[0].getBoundingClientRect();
-    const gap = parseInt(window.getComputedStyle(slider).gap) || 20;
+    // Calcula quantos cards cabem na tela por vez
+    const viewportWidth = document.querySelector('.carousel-viewport').offsetWidth;
+    const cardsInView = Math.floor(viewportWidth / (cardWidth + gap));
     
-    const stepSize = rect.width + gap;
-    
-    // Calcula quantos cards estão visíveis
-    const visibleCards = Math.round(viewport.offsetWidth / stepSize) || 1;
-    const maxIndex = cards.length - visibleCards;
-
+    // Atualiza o índice
     currentIndex += direction;
 
-    // Travas
-    if (currentIndex < 0) currentIndex = 0;
-    if (currentIndex > maxIndex) currentIndex = maxIndex;
-
-    const offset = currentIndex * stepSize;
-    slider.style.transform = `translateX(-${offset}px)`;
-}
-
-// Resetar posição ao girar o celular ou redimensionar a tela
-window.addEventListener('resize', () => {
-    currentIndex = 0;
-    document.getElementById('carouselSlider').style.transform = 'translateX(0)';
-});
-
-function initInfiniteScroll() {
-    const track = document.getElementById('reviewTrack');
-    const cards = Array.from(track.children);
+    // Limite para não ir antes do primeiro
+    if (currentIndex < 0) {
+        currentIndex = 0;
+    } 
     
-    // Duplica os cards para o loop infinito
-    cards.forEach(card => {
-        const clone = card.cloneNode(true);
-        track.appendChild(clone);
-    });
-
-    let scrollAmount = 0;
-    const speed = 0.7; // Ajuste para mais rápido ou mais devagar
-
-    function animate() {
-        scrollAmount -= speed;
-        
-        // Quando metade (o conjunto original) passar, reseta para 0
-        if (Math.abs(scrollAmount) >= track.scrollWidth / 2) {
-            scrollAmount = 0;
-        }
-        
-        track.style.transform = `translateX(${scrollAmount}px)`;
-        requestAnimationFrame(animate);
+    // Limite máximo: total de cards menos os que já estão aparecendo na tela
+    const maxIndex = totalCards - cardsInView;
+    if (currentIndex > maxIndex) {
+        currentIndex = maxIndex;
     }
 
-    animate();
+    // Calcula o deslocamento exato
+    const translateX = currentIndex * (cardWidth + gap);
+    slider.style.transform = `translateX(-${translateX}px)`;
 }
 
-// Inicializa quando carregar
-window.addEventListener('load', initInfiniteScroll);
+window.onload = function() {
+    const track = document.getElementById('reviewTrack');
+    
+    // Clona todo o conteúdo interno (os cards) do track
+    const clone = track.innerHTML;
+    
+    // Adiciona o clone ao final do track para criar o loop
+    track.innerHTML += clone;
+};
 </script>
 <script>
   // Registra o plugin no GSAP
@@ -472,28 +479,46 @@ function initAnimations() {
     });
 
     // 3. ANIMAÇÃO: APARECER (Crescer/Surgir de baixo)
-    document.querySelectorAll('.aparecer').forEach(el => {
-        gsap.from(el, {
-            y: 50,            // Vem de baixo
-            opacity: 0,
-            duration: 1,
-            stagger: 0.2,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: el,
-                start: "top 90%", // Aparece um pouco mais tarde para dar efeito
-                toggleActions: "play none none none"
-            }
-        });
+    
+        // 3. ANIMAÇÃO: APARECER (Individual para cada item)
+document.querySelectorAll('.aparecer').forEach(el => {
+    gsap.from(el, {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: el,       // O gatilho agora é o próprio elemento atual (el)
+            start: "top 90%",  // Dispara quando o elemento entra na tela
+            toggleActions: "play none none none"
+        }
     });
+});
+    };
 
     
-}
+
 
 // Inicia as animações apenas após o carregamento total da página
 window.addEventListener('load', initAnimations);
 </script>
+<script>
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('#nav-list');
 
+    menu.addEventListener('click', function() {
+        menu.classList.toggle('is-active'); // Anima o hambúrguer
+        menuLinks.classList.toggle('active'); // Abre/fecha o menu
+    });
+
+    // Fecha o menu ao clicar em um link
+    document.querySelectorAll('.ul-nav li a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('is-active');
+            menuLinks.classList.remove('active');
+        });
+    });
+</script>
 </body>
 
 </html>

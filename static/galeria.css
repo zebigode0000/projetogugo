@@ -79,6 +79,58 @@ body {
     height: 45px; 
     margin-bottom: 10px;
   }
+  /* Estilo do Botão Hambúrguer (Escondido no Desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+/* Responsividade Mobile (Máximo 900px conforme seu código) */
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: flex; /* Mostra o hambúrguer */
+        z-index: 1001;
+    }
+
+    .ul-nav {
+        position: fixed;
+        right: -100%; /* Esconde a aba para a direita */
+        top: 0;
+        flex-direction: column !important;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 70%; /* Largura da aba lateral */
+        height: 100vh;
+        padding-top: 100px;
+        transition: 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* Quando a classe 'active' for adicionada pelo JS */
+    .ul-nav.active {
+        right: 0;
+    }
+
+    .ul-nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Animação do Hambúrguer virando "X" */
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
 
   .ul-nav {
     flex-wrap: wrap;
