@@ -41,3 +41,7 @@ def vegan():
 @app.route("/realismo") 
 def realismo(): 
     return render_template("blogs/realismo.html")
+
+@app.route("/peleNegra") 
+def peleNegra(): 
+    return render_template("blogs/peleNegra.html")
